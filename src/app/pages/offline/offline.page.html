@@ -1,0 +1,55 @@
+<ion-header >
+  
+</ion-header>
+
+
+<ion-content class="no-scroll" (swipeRight)="prevPage()" (swipeLeft)="nextPage()">
+  
+  <div class ='content'>
+    <div class="header">
+      
+      <ion-button class="button-detail" (click)="Home()">
+      </ion-button>
+      <ion-button class="Statich" (click)="Statistics()">
+      </ion-button>
+      <h1 class="level">{{data.level()}}</h1>
+      <h1 class="score">{{data.score()}}</h1>
+    </div>
+    
+    <div class='img_container' [style.background-image]="'url(assets/img/hangman' + (settings.max_guesses - data.guesses_left) + '.png)'">
+      <ion-button class="button-help" (click)="Help()" [disabled]="checkscore === false"></ion-button>
+      <ion-button class="button2-help" (click)="Help2()" [disabled]="flagHep2 === false"></ion-button>
+      <div class="alive">
+        <ion-icon name="heart" color="danger" size="large"> </ion-icon>
+        <ion-label style="color: aliceblue;">{{this.data.statistics.alive +1}}</ion-label>
+      </div>
+      
+      <div class="object">
+        <ion-img class="monkey" src="../../../assets/images/monkey-sheet0.png"></ion-img>
+        <ion-img class="monkey-tial" src="../../../assets/images/tial-sheet0.png"></ion-img>
+      </div>
+    </div>
+    <div class='word_content'>
+      
+      <div>
+        <div class="suggestions">
+          <ion-label class="group-word"  >{{data.group}}</ion-label>
+        </div>
+        
+        <div style="text-align: center;">
+          <div class="word_guess">{{data.word_guess}}</div>
+        </div>
+        <div class="alphabet_container">
+          <ion-button fill="clear"  class="alphabet button" *ngFor="let a of settings.alphabet" (click)="guess(a)" 
+                  [disabled]="data.guesses.indexOf(a) !== -1" [class.long]="settings.alphabet.length >= 29">{{a}}</ion-button>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+  </div>
+  
+  
+  
+</ion-content>

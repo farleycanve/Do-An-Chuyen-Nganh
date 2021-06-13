@@ -1,0 +1,20 @@
+<ion-content>
+  <ion-button (click)="close()">
+    close
+  </ion-button>
+
+    <ion-list *ngFor="let user of players; let i =index">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://avatars.dicebear.com/api/avataaars/{{user.name}}.svg">
+        </ion-avatar>
+        <ion-label>
+          <h1>{{user.name}}</h1>
+          <h2>{{user.score}}</h2>
+        </ion-label>
+        <ion-label><h1>#{{i}}</h1></ion-label>
+      </ion-item>
+    </ion-list>
+        
+     
+</ion-content>

@@ -1,17 +1,17 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content fullscreen>
+  <ion-card (click)="GameOffline()">
+    <img src="./assets/images/gamelogo.png" />
+    <ion-card-header>
+      <ion-card-subtitle>offline</ion-card-subtitle>
+      <ion-card-title color="success">Guess word</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-card (click)="GameOnline()">
+    <img src="./assets/background/theme2.jpg" />
+    <ion-card-header>
+      <ion-card-subtitle>online</ion-card-subtitle>
+      <ion-card-title color="success">Paint-Guess word</ion-card-title>
+    </ion-card-header>
+  </ion-card>
 </ion-content>

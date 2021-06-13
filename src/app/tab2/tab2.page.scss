@@ -1,0 +1,35 @@
+.body{
+    background-color: black;
+}
+.spotlight {
+    width: 100%;
+    height: 30vh;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
+    position: relative;
+    
+}
+    // Image overlay gradient
+.gradient {
+      background: linear-gradient(#ffffff00 40%, #000000c2, #000 95%);
+      width: 100%;
+      height: 100%;
+      
+    }
+.text{
+    position:absolute;
+    left: 30%;
+    bottom:0%
+    
+}
+.so{
+    position:absolute;
+    left: 30%;
+    top:10%
+}
+.so1000{
+    position:absolute;
+    left: 20%;
+    top:10%
+}

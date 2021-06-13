@@ -1,0 +1,25 @@
+<ion-header>
+ 
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item  color="dark">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="tabs/tab2"></ion-back-button>
+      </ion-buttons>
+        
+        <ion-label>TỪ VỰNG</ion-label>
+        <ion-label>NGHĨA</ion-label>
+    </ion-item>
+      <ion-item (click)="goToWordsDetail(word)" *ngFor="let word of words">
+
+          <ion-avatar slot="start">
+            <ion-img src="{{word.linkImage}}"></ion-img>
+          </ion-avatar>
+          <ion-label>{{word.Word}} <p>({{word.Type}})</p></ion-label>
+          <h3>{{word.phienAm}}</h3>
+          <ion-label><h2>{{word.Meaning}}</h2></ion-label>
+      </ion-item>
+  </ion-list>
+
+</ion-content>

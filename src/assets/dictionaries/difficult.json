@@ -1,0 +1,88 @@
+{
+  "alphabet": ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
+  "groups": [
+    {
+      "name":"animal",
+      "words":
+      ["Bear","Lion","Tiger","Dog","Chimpanzee","Elephant","Fox","Giraffe","Hippopotamus","Jaguar"
+        ,"Porcupine","Raccoon","Rhinoceros","Squirrel","Crocodile","Alligator","Bat","Deer","Wolf","Beaver"
+        ,"Chipmunk","Dolphin","Shark","Whale","Swordfish","Walrus","Penguin","Turtle","Antelope","Bee","Cobra"
+        ,"Camel","Scorpion","Hedgehog","Zebra","Moose","Donkey","Bison","Llama","Jellyfish","Octopus","Pufferfish"
+        ,"Squid","Starfish","Stingray","Kangaroo","Koala","Panda","Platypus","Flying squirrel","Baboon","Abalone"
+        ,"Anteater","Beetle","Blackbird","Boar","Butterfly","Canary","Carp","Caterpillar","Centipede","Chameleon"
+        ,"Gecko","Chamois","Chihuahua","Cicada","Cockroach","Crab","Crane","Cricket","Dachshund","Dalmatian","Dove"
+        ,"Pigeon","Dragonfly","Dromedary","Duck","Eagle","Eel","Falcon","Hawk","Fawn","Firefly","Flea","Fly","Foal"
+        ,"Frog","Gannet","Gibbon","Goat","Gopher","Grasshopper","Greyhound","Hare","Heron","Hound","Hummingbird"
+        ,"Hyena","Iguana","Insect","Kingfisher","Ladybug","Lemur","Leopard","Locust","Lobster","Shrimp","Louse"
+        ,"Mantis","Mosquito","Moth","Mule","Mussel","Nightingale","Orangutan","Ostrich","Otter","Owl","Pangolin"
+        ,"Parakeet","Parrot","Peacock","Gazelle","Woodpecker","pig"
+      ]
+    },
+    {
+      "name":"Flower",
+      "words":
+      ["Daisy","Rose","Sunflower","Iris","Narcissus","Orchid","Tulip","Cyclamen","Carnation","Poppy"
+      ,"Pansy","Violet","Mimosa","Lily","Hyacinth","Anemone","Gladiolus","Bougainvillea","Cactusflower"
+      ,"Camellia","Chrysanthemum","Cockscomb","Daffodil","Dahlia","Flamboyant","Frangipani","Gerbera","Hibiscus"
+      ,"Jasmine","Lavender","Lilac","Lotus","Magnolia","Marigold","Tuberose","Apricot blossom","Cherry blossom"
+      ,"Dandelion","Moss rose","Hydrangea","Snapdragon","Periwinkle","Peony","Primrose","Zinnia","Buttercup"
+      ,"Bellflower","Honeysuckle","White dotted","Phoenix flower"
+      ]
+    },
+    {
+      "name":"Family",
+      "words":
+      ["Mother","Father","Husband","Wife","Daughter","Son","Parent","Child","Sibling","Brother","Sister"
+        ,"Uncle","Aunt","Nephew","Niece","Grandparent","Grandmother","Grandfather","Grandson","Granddaughter"
+        ,"Grandchild","Cousin","Relative"
+      ]
+    },
+    
+    
+    {
+      "name":"Fruit",
+      "words":
+      ["Avocado","Apple","Orange","Banana","Grape","Grapefruit","Starfruit","Mango","Pineapple","Mangosteen","Mandarin"
+        ,"Kiwi fruit","Kumquat","Jackfruit","Durian","Lemon","Lime","Papaya","Soursop","Custard apple"
+        ,"Plum","Apricot","Peach","Cherry","Sapota","Rambutan","Coconut","Guava","Pear","Fig","Dragon fruit","Melon"
+        ,"Watermelon","Lychee","Logan","Pomegranate","Berry","Strawberry","Passion fruit","Persimmon","Tamarind","Cranberry"
+        ,"Jujube","Dates","Green almonds","Ugli fruit","Citron","Ambarella","Granadilla","Cantaloupe","Honeydew","Almond"
+        ,"Chestnut","Blackberries","Raisin"
+      ]
+    },
+    {
+      "name":"Feeling",
+      "words":
+      ["Amused","Angry","Anxious","Annoyed","Appalled","Apprehensive","Arrogant","Ashamed","Bewildered","Bored","Confident"
+        ,"Cheated","Confused","Cross","Depressed","Delighted","Disappointed","Ecstatic","Enthusiastic","Excited"
+        ,"Emotional","Envious","Embarrassed","Frightened","Frustrated","Furious","Great","Happy","Horrified","Hurt"
+        ,"Irritated","Intrigued","Jealous","Jaded","Keen","Malicious","Nonplussed","Negative","Overwelmed","Overjoyed"
+        ,"Positive","Relaxed","Reluctant","Sad","Scared","Seething","Stressed","Surprised","Suspicious","Terrific"
+        ,"Terrible","Terrified","Tense","Thoughtful","Tired","Upset","Unhappy","Victimised","Wonderful","Worried"
+      ]
+    },
+    {
+      "name":"Occupations",
+      "words":
+      ["Doctor","Dentist","Cashier","Builder","Reporter","Tailor","Teacher","Cook","Magician","Baker","Singer"
+        ,"Artist","Waiter","Carpenter","Actor","Nurse","Secretary","Gardener","Vet","Bussinessman"
+        ,"Policeman","Painter","Hairdresser","Dancer","Farmer","Astronaut","Cartoonist","Architect"
+        ,"Photographer","Flightattendant","Interior designer","Lawyer","Psychologist","Model","Journalist"
+        ,"Discjockey","Tour guide","Receptionist","Engineer","Programmer","Paramedic","Surgeon","Tattooist"
+        ,"Musician","Sailor","Florist","Firefighter","Writer","Plumber","Mailman","Barista","Judge"
+        ,"Bodyguard","Babysitter","Pilot","Electrician","Mechanic","Cameraman"
+      ]
+    },
+    {
+      "name":"sport",
+      "words":
+      ["Basketball","Tennis","Badminton","Cycling","Gymnastics","Running","Swimming","Riding","Volleyball"
+      ,"Football","Table tennis","Baseball","Golf","Skateboarding","Windsurfing","Diving","Ice skating"
+      ,"Skiing","Aerobics","Archery","Ahletics","Bowls","Boxing","Canoeing","Climbing","Darts","Fishing","Handball"
+      ,"Hiking","Hockey","Horse racing","Horse riding","Hunting","Rollerblading","Jogging","Judo","Karate","Kick boxing"
+      ,"Lacrosse","Mountaineering","Netball","Snooker","Rowing","Rugby","Sailing","Shooting","Scuba diving","Weightlifting"
+      ,"Wrestling","Yoga"
+      ]
+    }
+  ]
+}

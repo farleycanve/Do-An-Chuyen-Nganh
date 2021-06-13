@@ -1,0 +1,34 @@
+{
+  "hangman": "Hirsipuu",
+  "story": "Cốt chuyện",
+  "continue": "Tiếp tục",
+  "story_content": "Bạn là một mật vụ làm việc cho nhà nước. Một ngày nọ, bạn nhận được một nhiệm vụ bí mật, nơi bạn thâm nhập vào một tổ chức tội phạm. Bạn cố gắng lấy lòng tin của họ bằng cách tham gia vào một vụ cướp ngân hàng, nhưng đồng bọn của bạn quyết định để Kolkata đưa bạn đến hiện trường vụ án. Các nhà chức trách sẽ tìm thấy bạn bất tỉnh tại hiện trường vụ án và kết luận bạn có tội. <br> <br> Khi bạn bất tỉnh, bạn sẽ phải đối mặt với án tử hình và việc khai thác gỗ đã bắt đầu! May mắn thay, nhà nước đã cung cấp cho bạn một từ khóa bí mật cho những tình huống như vậy - một cú đánh vào đầu không may khiến bạn quên từ đó là gì. <br> <br> Bạn biết cái móc áo biết từ bí mật. Với kỹ năng đại lý của bạn, bạn có thể đọc các đặc điểm trên khuôn mặt của họ và do đó, bằng cách hỏi bảng chữ cái, bạn có thể suy ra bảng chữ cái nào thuộc về từ đó. Tuy nhiên, thời gian rất hạn chế, vì vậy bạn có một số lần đoán theo bảng chữ cái có hạn. <br> <br> Bạn có thể đoán từ trước khi hoàn thành nhật ký và đối phó với tình huống khó khăn này không?",
+
+  "victory": "Thắng!",
+  "game_over": "Thua!",
+  "victory_message": "Bạn đã đoán đúng, từ đó là ",
+  "game_over_message": "Bạn đã đoán sai quá nhiều lần và bạn đã bị treo cổ. <br> <br> Câu trả lời đúng sẽ là ",
+  "play_again": "Chơi tiếp",
+
+  "statistics": "Điểm số",
+  "games": "Số lượt chơi",
+  "victories": "Thắng",
+  "losses": "Thua",
+  "reset": "Cài lại",
+  "delete_statistics": "Xóa kết quả?",
+  "delete_message": "Hành động này sẽ đặt lại thống kê về 0 - không có cách nào để đảo ngược nó.",
+  "cancel": "Hủy",
+
+  "settings": "Cài đặt",
+  "language": "Ngôn ngữ",
+  "dictionary": "Từ điển",
+  "english": "Tiếng Anh",
+  "vietnamese": "Tiếng Việt",
+  "difficulty": "Độ khó",
+  "easy": "Dễ",
+  "medium": "Vừa",
+  "hard": "Khó",
+  "online_mode": "Online mode",
+  "setting_info": "<b> Ngôn ngữ </b>: <br> Ngôn ngữ của ứng dụng. <br> <br> <b> Từ điển: </b> <br> Trò chơi sử dụng những từ nào. <br> <br> <b> Khó khăn : </b> <br> Có bao nhiêu lần đoán trước khi trò chơi kết thúc. Các từ tiếng Anh trực tuyến cũng có những từ ít phổ biến hơn với độ khó cao hơn. <br> <br> <b> Chế độ trực tuyến: </b> <br> Nếu đang hoạt động, các từ trong từ điển tiếng Anh sẽ được tìm nạp trực tuyến, giả sử có kết nối internet. Khi bị tắt, các từ sẽ được tìm nạp từ bộ nhớ cục bộ. Từ điển không phải tiếng Anh không sử dụng kết nối internet.",
+  "close": "Đóng"
+}

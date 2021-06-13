@@ -1,17 +1,14 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <div class="spotlight" [style.background-image]="'url(/assets/images/toeic600.png)'" (click)="toeic600()">
+    <div class="gradient"></div>
+    <div class="so"><h1  style="color:aliceblue;font-size: 100px;">600</h1></div>
+    <div class="text"><h1 style="color: rgb(45,211,111); ">Word for Toeic</h1></div>
+  </div>
+  <div class="spotlight" [style.background-image]="'url(/assets/images/toeic600.png)'" (click)="toeic600()">
+    <div class="gradient"></div>
+    <div class="so1000"><h1  style="color: aliceblue;font-size: 100px;">1000</h1></div>
+    <div class="text"><h1 style="color: rgb(45,211,111); ">Word for Ielts</h1></div>
+  </div>
 </ion-content>

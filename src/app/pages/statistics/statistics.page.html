@@ -1,0 +1,42 @@
+<ion-header>
+  
+</ion-header>
+
+<ion-content class="no-scroll" (swipeRight)="prevPage()" (swipeLeft)="nextPage()">
+
+  <ion-list>
+    
+    <ion-item-divider>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="offline"></ion-back-button>
+      </ion-buttons>
+      <h1 slot="end"> {{settings.lang?.statistics}}</h1>
+      <ion-icon slot="end" size="large" color="primary" name="information-circle"></ion-icon>
+    </ion-item-divider>
+    <ion-list>
+        <ion-item>
+          <ion-label>{{settings.lang?.games}}</ion-label>
+          <ion-note color="primary" slot="end">{{data.victories() + data.losses()}}</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{settings.lang?.victories}}</ion-label>
+          <ion-note color="primary" slot="end">{{data.victories()}}</ion-note>
+          <span *ngIf="data.victories()">({{victory_percent()}} %)</span>
+        </ion-item>
+        <ion-item>
+          <ion-label>{{settings.lang?.losses}}</ion-label>
+          <ion-note color="danger" slot="end">{{data.losses()}}</ion-note>
+          <span *ngIf="data.losses()">({{loss_percent()}} %)</span>
+        </ion-item>
+        <ion-item>
+          <ion-label>Highest point</ion-label>
+          <ion-note color="danger" slot="end">{{data.MaxPoint()}}</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Highest level</ion-label>
+          <ion-note color="danger" slot="end">{{data.MaxLevel()}}</ion-note>
+        </ion-item>
+    </ion-list>
+  </ion-list>
+  <ion-button expand="block" color="light"  (click)="reset()">{{settings.lang?.reset}}</ion-button>
+</ion-content>

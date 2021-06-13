@@ -1,0 +1,39 @@
+{
+  "alphabet": ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
+  "groups": [
+    {
+      "name":"animal",
+      "words":
+      ["Bear","Lion","Tiger","Dog","Chimpanzee","Elephant","Fox"
+      ]
+    },
+    {
+      "name":"Flower",
+      "words":
+      ["Daisy","Rose","Sunflower","Iris","Narcissus","Orchid","Tulip"
+      ]
+    },
+    {
+      "name":"Family",
+      "words":
+      ["Mother","Father","Husband","Wife","Daughter","Son","Parent"
+      ]
+    },
+    
+    
+    {
+      "name":"Fruit",
+      "words":
+      ["Avocado","Apple","Orange","Banana","Grape","Grapefruit","Mango"
+      ]
+    },
+    
+    
+    {
+      "name":"sport",
+      "words":
+      ["Basketball","Tennis","Badminton","Cycling","Gymnastics","Running","Swimming"
+      ]
+    }
+  ]
+}

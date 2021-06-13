@@ -1,17 +1,35 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="no-scroll" (swipeRight)="prevPage()" (swipeLeft)="nextPage()">
+  <ion-list>
+    <ion-item-divider color="dark">
+      <h1 slot="start">{{settings.lang?.settings}} </h1>
+      <ion-icon slot="end" name="information-circle" class='info' tappable (tap)="openInfo()"></ion-icon>
+    </ion-item-divider>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <ion-item>
+      <ion-label>Dark mode</ion-label>
+      <ion-toggle color="dark" (ionChange)="DarkMode($event)"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{settings.lang?.language}}</ion-label>
+      <ion-select [ngModel]="settings.settings.language" (ionChange)="updateLanguage($event)" [selectedText]="settings.lang[settings.settings.language]">
+        <ion-select-option *ngFor="let lang of settings.languages" [value]="lang">
+          {{settings.lang[lang]}}
+          </ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>{{settings.lang?.difficulty}}</ion-label>
+      <ion-select [cancelText]="settings.lang.cancel" [ngModel]="settings.settings.difficulty" (ionChange)="updateDifficaly($event)" 
+                  [selectedText]="settings.lang[difficulties[settings.settings.difficulty]]">
+        <ion-select-option value="0">{{settings.lang?.easy}}</ion-select-option>
+        <ion-select-option value="1">{{settings.lang?.medium}}</ion-select-option>
+        <ion-select-option value="2">{{settings.lang?.hard}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+  </ion-list>
 </ion-content>
