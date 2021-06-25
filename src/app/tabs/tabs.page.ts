@@ -22,7 +22,13 @@ ngOnInit() {
   if(this.settings.initialized!=true){
     console.log(this.settings.initialized)
     this.settings.initDB();
-    this.askLanguage();
+    this.settings.updateLanguage('english').then(() => {
+      this.settings.getDictionaryFile().then(() => {
+        //this.showStory();
+      this.data.dictionary = 'english';
+      this.data.reset_game();
+    })
+  });
 
   }else{
     // Reset if app is just opened (no word yet)
@@ -31,40 +37,7 @@ ngOnInit() {
     }
   }
 }
-async askLanguage() {
-  let inputs = this.settings.languages.map((lang) =>  {
-    return {
-      type: 'radio',
-      label: lang,
-      value: lang,
-      checked: lang == 'english'
-    }
-  });
-  var resultArray = Object.keys(inputs).map(function(inputsIndex){
-    let input = inputs[inputsIndex];
-    // do something with input
-    return input;
-  });
-  let alert = await this.alertCtrl.create({
-    header: 'Select language',
-    inputs: resultArray,
-    buttons: [{
-      text: 'Continue',
-      handler: lang => {
-          this.settings.updateLanguage(lang).then(() => {
-            this.settings.getDictionaryFile().then(() => {
-              //this.showStory();
-            this.data.dictionary = 'english';
-            this.data.reset_game();
-          })
-        });
-      }
-    }],
-    backdropDismiss: false,
-    cssClass: 'language_screen'
-  })
-  alert.present();
-}
+
 
 // Shows story of the game
 

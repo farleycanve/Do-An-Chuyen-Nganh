@@ -3,7 +3,7 @@
 <ion-content [forceOverscroll]="false">
   <ion-row>
     <ion-col><h1>{{curentTime}}</h1></ion-col>
-    
+    <ion-col><h2>Round {{round}}</h2></ion-col>
     <ion-col class=" word_gess"><h1>{{curenWord}}</h1></ion-col>
   </ion-row>
   <ion-row>
@@ -60,17 +60,17 @@
           </ion-text>
           <ion-row *ngFor="let mess of messages">
        
-            <ion-col size="9" *ngIf="message.user !== currentUser" class="message other-message">
+            <ion-col  *ngIf="mess.id === 1 " class="message other-message">
             
               <span>{{ mess.message }}</span>
               
             </ion-col>
        
-            <ion-col offset="3" size="9" *ngIf="message.user === currentUser" class="message my-message">
-              <b>{{ message.user }}</b><br>
-              <span>{{ message.msg }}</span>
+            <ion-col  *ngIf="mess.id !== 1"  class="message my-message">
+              <span>{{ mess.message}}</span>
               
             </ion-col>
+            
        
           </ion-row>
         </ion-grid>
@@ -79,7 +79,11 @@
     </ion-col>
   </ion-row>
   
-  
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button color="light" (click)="Home()">
+      <ion-icon md="caret-back" ios="chevron-back-circle-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
  
 <ion-footer>
@@ -89,7 +93,7 @@
         <ion-textarea auto-grow class="message-input" rows="1" [(ngModel)]="message"></ion-textarea>
       </ion-col>
       <ion-col size="2">
-        <ion-button expand="block" fill="clear" color="primary" [disabled]="message === ''" class="msg-btn"
+        <ion-button expand="block"  color="success" [disabled]="message === ''" class="msg-btn"
           (click)="sendMessage()">
           <ion-icon name="paper-plane-outline" slot="icon-only"></ion-icon>
         </ion-button>

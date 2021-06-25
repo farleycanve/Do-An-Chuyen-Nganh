@@ -39,7 +39,8 @@ export class GameDataService {
     level:0,
     alive:2,
     maxScore:0,
-    maxLevel:0
+    maxLevel:0,
+    diemTinh:10,
   }
 
   victories(){
@@ -88,6 +89,7 @@ export class GameDataService {
     this.statistics.level=Math.floor(Math.pow(this.statistics.round, 8/9))
     
     this.statistics.score+=(3+this.statistics.level);
+    this.statistics.diemTinh+=(3+this.statistics.level);
     this.storage.set('statistics', this.statistics);
     if(this.statistics.maxLevel<this.statistics.level||this.statistics.score>this.statistics.maxScore){
       this.statistics.maxLevel=this.statistics.level;
@@ -121,8 +123,9 @@ export class GameDataService {
         this.statistics.level=0;
         this.statistics.alive=2;
         this.statistics.score=10;
+        this.statistics.diemTinh=10;
       }else{
-      this.statistics.level=Math.floor(this.statistics.level*(this.statistics.score/(3*this.statistics.round)*0.7))
+      this.statistics.level=Math.floor(this.statistics.level*(this.statistics.score/this.statistics.diemTinh)*0.5)
       this.statistics.round=1;
       this.statistics.score=0;
       }

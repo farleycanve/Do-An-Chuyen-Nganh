@@ -1,6 +1,6 @@
 import {ElementRef, ViewChild,Component, OnInit, AfterViewInit } from '@angular/core';
 import { Socket } from 'ngx-socket-io';
-import { ToastController ,Platform, AlertController, ModalController, LoadingController} from '@ionic/angular';
+import { ToastController ,Platform, AlertController, ModalController, LoadingController, NavController} from '@ionic/angular';
 import{ReplayComponent} from '../../replay/replay.component'
 
 
@@ -40,7 +40,7 @@ export class OnlinePage implements AfterViewInit {
     timerID:any;
     pickWordID:any;
     hints = [];
-    round:any;
+    round=0;
     time:any;
     ListPlayer=[];
     alert:any;
@@ -56,6 +56,7 @@ export class OnlinePage implements AfterViewInit {
       private alertController:AlertController,
       private modalCtrl:ModalController,
       private loader: LoadingController,
+      private navCtrl: NavController, 
       ) {}
     async ngOnInit() {
       try {
@@ -120,7 +121,7 @@ export class OnlinePage implements AfterViewInit {
         //clock.stop();
       });
       this.socket.on('settingsUpdate', (data) => {
-        this.round = data.rounds;
+        
         this.time = data.time;
         console.log(data)
       });
@@ -128,7 +129,7 @@ export class OnlinePage implements AfterViewInit {
       console.log(data) });
       
       this.socket.on('chooseWord', async ([word1, word2, word3]) => {
-        console.log('update word')
+        
         this.permitDraw=true;
         clearInterval(this.timerID);
         this.PresentChooseWord(word1,word2,word3)
@@ -158,6 +159,9 @@ export class OnlinePage implements AfterViewInit {
         // drawerScore,
         data
     ) => this.UpdateScore(data))
+    this.socket.on('updateRound',(data)=>{
+      this.round=data+1
+    });
     this.socket.on('endGame', async ({stats }) => {
       
       clearInterval(this.timerID);
@@ -178,7 +182,7 @@ export class OnlinePage implements AfterViewInit {
     CorrectGess(data){
       
         var mes1 = {
-          id:"",
+          id:3,
           message:data.message
         };
         this.messages.push(mes1)
@@ -240,6 +244,11 @@ export class OnlinePage implements AfterViewInit {
                   
                 }
               }
+            },{
+              text: 'Home',
+              handler:()=>{
+                this.navCtrl.navigateRoot('/');
+              }
             }
           ]
         });
@@ -271,7 +280,8 @@ export class OnlinePage implements AfterViewInit {
       let toast = await this.toastCtrl.create({
         message: msg,
         position: 'top',
-        duration: 2000
+        duration: 2000,
+        cssClass: 'customToastClass'
       });
       toast.present();
     }
@@ -337,7 +347,7 @@ export class OnlinePage implements AfterViewInit {
     }
   
     endDrawing(e){
-      console.log(e)
+      
       var canvasPosition = this.canvasElement.getBoundingClientRect();
       if (!this.drawing) { return; }
       this.drawing = false;
@@ -428,14 +438,17 @@ export class OnlinePage implements AfterViewInit {
     appendMessage(data) {
       
       if (data.name !== '') {
-         var mes = {
-          id:"1",
-          message:data.name+ ': '+data.message
-        };
-        this.messages.push(mes)
+        {
+          var mes = {
+            id:1,
+            message:data.name+ ': '+data.message
+          };
+          this.messages.push(mes)
+        }
+         
       }else{
         var mes1 = {
-          id:"",
+          id:2,
           message:data.message
         };
         this.messages.push(mes1)
@@ -501,6 +514,9 @@ export class OnlinePage implements AfterViewInit {
     }
     async presentModal(data) {
       
+    }
+    Home(){
+      this.navCtrl.navigateRoot('/');
     }
   }
   

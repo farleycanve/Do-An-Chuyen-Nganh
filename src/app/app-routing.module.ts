@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'online',
     loadChildren: () => import('./pages/online/online.module').then( m => m.OnlinePageModule)
+  },
+  {
+    path: 'news',
+    loadChildren: () => import('./pages/news/news.module').then( m => m.NewsPageModule)
   }
 ];
 @NgModule({

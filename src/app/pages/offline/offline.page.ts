@@ -70,9 +70,9 @@ async showAlive(n:number){
   
     {
       (await this.toastCtrl.create({
-        message:"You have "+(n+1)+" alive",
+        message:"You have "+(n+1)+" lives left",
         duration: 2000,
-        position: 'middle',
+        position: 'top',
         cssClass: 'customToastClass'
       })).present();
     }
